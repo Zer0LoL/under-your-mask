@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bup8224c6cuqn"]
+
+[ext_resource type="Script" uid="uid://b8kohhns22wfv" path="res://scripts/hud.gd" id="1_fls4u"]
+[ext_resource type="Texture2D" uid="uid://bphddk37c8kki" path="res://sprites/corazonlleno.png" id="2_1etfg"]
+[ext_resource type="Texture2D" uid="uid://cudrwgsxa2hna" path="res://sprites/corazonvacio.png" id="3_1etfg"]
+
+[node name="Hud" type="CanvasLayer" unique_id=1498595197]
+script = ExtResource("1_fls4u")
+corazon_lleno = ExtResource("2_1etfg")
+corazon_vacio = ExtResource("3_1etfg")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=698384068]
+offset_left = 229.0
+offset_top = 2.0
+offset_right = 317.0
+offset_bottom = 21.0
+theme_override_constants/separation = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=101704671]
+layout_mode = 2
+texture = ExtResource("2_1etfg")
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer" unique_id=1404126071]
+layout_mode = 2
+texture = ExtResource("2_1etfg")
+
+[node name="TextureRect3" type="TextureRect" parent="HBoxContainer" unique_id=1228242498]
+layout_mode = 2
+texture = ExtResource("2_1etfg")
+
+[node name="TextureRect4" type="TextureRect" parent="HBoxContainer" unique_id=761798584]
+layout_mode = 2
+texture = ExtResource("2_1etfg")
+
+[node name="TextureRect5" type="TextureRect" parent="HBoxContainer" unique_id=17761503]
+layout_mode = 2
+texture = ExtResource("2_1etfg")

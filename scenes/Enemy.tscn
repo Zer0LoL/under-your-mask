@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://dj6jp6x64vd28"]
+
+[ext_resource type="Texture2D" uid="uid://dgjg8kfb8jv7t" path="res://sprites/enemigo.png" id="1_3gvst"]
+[ext_resource type="Script" uid="uid://ds1ydh07fxntu" path="res://scripts/enemy.gd" id="1_55jtl"]
+[ext_resource type="AudioStream" uid="uid://dl73n6v88g7i2" path="res://assets/hitby.wav" id="3_mpr68"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_55jtl"]
+size = Vector2(13, 16.25)
+
+[sub_resource type="Animation" id="Animation_mpr68"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_55jtl"]
+resource_name = "idle"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mpr68"]
+_data = {
+&"RESET": SubResource("Animation_mpr68"),
+&"idle": SubResource("Animation_55jtl")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3gvst"]
+size = Vector2(16.5, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mpr68"]
+size = Vector2(15, 17)
+
+[node name="Enemigo" type="CharacterBody2D" unique_id=675038352]
+y_sort_enabled = true
+script = ExtResource("1_55jtl")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1569178052]
+texture = ExtResource("1_3gvst")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=835955462]
+position = Vector2(0, 0.125)
+shape = SubResource("RectangleShape2D_55jtl")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1071735051]
+libraries/ = SubResource("AnimationLibrary_mpr68")
+autoplay = &"idle"
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=193922911]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=2011345090]
+shape = SubResource("RectangleShape2D_3gvst")
+
+[node name="SFX_Dano" type="AudioStreamPlayer2D" parent="." unique_id=1122960045]
+stream = ExtResource("3_mpr68")
+volume_db = 6.5
+
+[node name="HitboxEnemigo" type="Area2D" parent="." unique_id=1112985411]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxEnemigo" unique_id=1320540924]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_mpr68")
+debug_color = Color(0.994412, 0, 0.22980583, 0.41960785)
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1628491381]
+target_position = Vector2(0, 16)
+collision_mask = 5
+
+[node name="TimerMovimiento" type="Timer" parent="." unique_id=1901934081]
+autostart = true
+
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
+[connection signal="body_entered" from="HitboxEnemigo" to="." method="_on_hitbox_enemigo_body_entered"]

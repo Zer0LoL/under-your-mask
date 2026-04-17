@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://c7yjvn1vdf7tv"]
+
+[ext_resource type="Script" uid="uid://cmgb51eho6a6n" path="res://scripts/dialogo.gd" id="1_67w0c"]
+[ext_resource type="AudioStream" uid="uid://d2sryikdlksc6" path="res://assets/Dialog.wav" id="2_vyewl"]
+[ext_resource type="Texture2D" uid="uid://cg2tx5sctjuu1" path="res://assets/face_hombre.png" id="2_y7ajg"]
+[ext_resource type="Texture2D" uid="uid://u4an3r2ewowy" path="res://assets/face_mascara.png" id="3_3hxtl"]
+[ext_resource type="FontFile" uid="uid://cgm025bqmyffs" path="res://assets/PressStart2P-Regular.ttf" id="4_3hxtl"]
+[ext_resource type="AudioStream" uid="uid://xc6nhvo52vip" path="res://assets/DialogMask.wav" id="4_pt6va"]
+
+[node name="DialogoOverlay" type="CanvasLayer" unique_id=1763008521]
+process_mode = 3
+script = ExtResource("1_67w0c")
+img_hombre = ExtResource("2_y7ajg")
+img_mascara = ExtResource("3_3hxtl")
+sfx_mascara = ExtResource("4_pt6va")
+sfx_hombre = ExtResource("2_vyewl")
+
+[node name="Caja" type="Control" parent="." unique_id=75708075]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="Caja" unique_id=269483604]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Caja" unique_id=245712371]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Retrato" type="TextureRect" parent="Caja/HBoxContainer" unique_id=1044019444]
+layout_mode = 2
+
+[node name="Texto" type="RichTextLabel" parent="Caja/HBoxContainer" unique_id=217409151]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/line_separation = 2
+theme_override_fonts/normal_font = ExtResource("4_3hxtl")
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+
+[node name="SFX_Voz" type="AudioStreamPlayer" parent="." unique_id=732105078]
+stream = ExtResource("2_vyewl")

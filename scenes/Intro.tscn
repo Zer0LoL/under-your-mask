@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://b25eew2s4r7dt"]
+
+[ext_resource type="Script" uid="uid://bh7gjnqa71v30" path="res://scripts/intro.gd" id="1_45dpb"]
+[ext_resource type="FontFile" uid="uid://cgm025bqmyffs" path="res://assets/PressStart2P-Regular.ttf" id="2_hc7eg"]
+[ext_resource type="AudioStream" uid="uid://c0bxsn1alo3ir" path="res://assets/Blip.wav" id="3_aqbct"]
+
+[node name="Intro" type="Control" unique_id=2038026622]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_45dpb")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1435261425]
+layout_mode = 0
+offset_left = -272.0
+offset_top = -137.0
+offset_right = 257.0
+offset_bottom = 176.0
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=836141718]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -157.0
+offset_top = -86.0
+offset_right = 155.0
+offset_bottom = 87.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/line_separation = 8
+theme_override_fonts/normal_font = ExtResource("2_hc7eg")
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1714491941]
+stream = ExtResource("3_aqbct")
+
+[node name="Timer" type="Timer" parent="." unique_id=1611483655]
