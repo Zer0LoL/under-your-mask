@@ -16,7 +16,7 @@
 
 ## 📖 Contexto del Proyecto
 
-**Under Your Mask** es un puzzle-platformer 2D en pixel art desarrollado completamente en **48 horas** como mi primera participación en la **Global Game Jam 2026**. 
+**Under Your Mask** es un puzzle-platformer 2D en pixel art desarrollado completamente en **4 días** como mi primera participación en la **Global Game Jam 2026**. 
 
 El juego explora una narrativa oscura sobre la identidad, la confianza y el precio de la libertad, combinando mecánicas de plataformas ágiles, resolución de puzzles en el entorno y un combate de jefe final desafiante con sincronización rítmica.
 
