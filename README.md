@@ -1,7 +1,7 @@
 # 🎭 Under Your Mask
 
 <p align="center">
-  <a href="https://zer0lol.itch.io/under-your-mask">
+  <a href="https://zer0lul.itch.io/under-your-mask">
     <img src="https://img.shields.io/badge/Play_on-itch.io-FA5C5C?style=for-the-badge&logo=itch.io" alt="Play on itch.io" />
   </a>
   <a href="https://godotengine.org/">
@@ -10,32 +10,32 @@
 </p>
 
 <p align="center">
-  <img src="UnderYourMaskGIF.gif" width="45%" alt="Gameplay de Under Your Mask" />
-  <img src="uymminiatura.png" width="45%" alt="Miniatura de Under Your Mask" />
+  <img src="UnderYourMaskGIF.gif" width="45%" alt="Under Your Mask Gameplay" />
+  <img src="uymminiatura.png" width="45%" alt="Under Your Mask Thumbnail" />
 </p>
 
-## 📖 Contexto del Proyecto
+## 📖 Project Context
 
-**Under Your Mask** es un puzzle-platformer 2D en pixel art desarrollado completamente en **48 horas** como mi primera participación en la **Global Game Jam 2026**. 
+**Under Your Mask** is a 2D pixel art puzzle-platformer developed entirely in **4 days** as my first entry for the **Global Game Jam 2026**. 
 
-El juego explora una narrativa oscura sobre la identidad, la confianza y el precio de la libertad, combinando mecánicas de plataformas ágiles, resolución de puzzles en el entorno y un combate de jefe final desafiante con sincronización rítmica.
+The game explores a dark narrative about identity, trust, and the price of freedom, combining agile platforming mechanics, environmental puzzle-solving, and a challenging boss fight with rhythmic synchronization.
 
-## 🛠️ Sistemas e Ingeniería (Bajo el capó)
+## 🛠️ Systems & Engineering (Under the hood)
 
-Como desarrollador, enfoqué este proyecto en construir sistemas lógicos robustos y escalables dentro de Godot:
+As a developer, I focused this project on building robust and scalable logical systems within Godot Engine:
 
-* **Sistema de Diálogos Dinámico (JSON):** Arquitectura de diálogos modular separada del código principal, permitiendo fácil inyección de guiones, control de velocidad de escritura tipo "typewriter" y modulación de pitch de audio aleatoria para las "voces".
-* **Máquina de Estados de Jefe Final:** Lógica de combate estructurada en fases progresivas dependientes del HP. Implementación de ataques predecibles pero rítmicos que evitan la selección aleatoria pura para garantizar un patrón de baile ("baile mortal") justo para el jugador.
-* **Sincronización Animación-Código (Freeze-Frame):** Sistema de impacto matemático donde la velocidad de reproducción de los `AnimationPlayers` se escala de forma dinámica (`velocidad_playback = duracion_base / duracion_ataque`), combinado con micro-pausas (`await`) para generar sensación de "peso" (Game Feel) en los golpes finales.
-* **Gestión de Escenas y Transiciones:** Uso intensivo de `CanvasLayer` y `Tweens` para fundidos, cinemáticas y cortinas de transición sin bloquear el hilo principal de físicas del motor.
+* **Dynamic Dialog System (JSON):** A modular dialog architecture separated from the main codebase. It allows for easy script injection, typewriter-style text speed control, and randomized audio pitch modulation for character "voices".
+* **Boss State Machine:** Combat logic structured in progressive, HP-dependent phases. It implements predictable yet rhythmic attacks that avoid pure RNG to ensure a fair "deadly dance" pattern for the player.
+* **Animation-Code Synchronization (Freeze-Frame):** A mathematical impact system where the playback speed of `AnimationPlayers` scales dynamically (`playback_speed = base_duration / attack_duration`), combined with micro-pauses (`await`) to generate a deep sense of "weight" (Game Feel) in the final strikes.
+* **Scene & Transition Management:** Intensive use of `CanvasLayer` and `Tweens` for visual fades, cinematics, and transition curtains without blocking the engine's main physics thread.
 
-## 🚀 Instalación y Ejecución Local
+## 🚀 Installation & Local Execution
 
-Si deseas probar el proyecto directamente en el motor:
-1. Clona este repositorio: `git clone https://github.com/Zer0LoL/under-your-mask.git`
-2. Abre **Godot Engine 4.x**.
-3. Importa el archivo `project.godot`.
-4. Pulsa F5 para ejecutar el juego.
+If you want to test the project directly in the engine:
+1. Clone this repository: `git clone https://github.com/Zer0LoL/under-your-mask.git`
+2. Open **Godot Engine 4.x**.
+3. Import the `project.godot` file.
+4. Press F5 to run the game.
 
 ---
-*Desarrollado por [Alvaro Roldan](https://github.com/Zer0LoL)*
+*Developed by [Alvaro Roldan](https://github.com/Zer0LoL)*
