@@ -1,9 +1,18 @@
 # 🎭 Under Your Mask
 
-[![Play on itch.io](https://img.shields.io/badge/Play_on-itch.io-FA5C5C?style=for-the-badge&logo=itch.io)](https://zer0lol.itch.io/under-your-mask)
-[![Godot Engine](https://img.shields.io/badge/Made_with-Godot_4-478CBF?style=for-the-badge&logo=godot-engine)](https://godotengine.org/)
+<p align="center">
+  <a href="https://zer0lol.itch.io/under-your-mask">
+    <img src="https://img.shields.io/badge/Play_on-itch.io-FA5C5C?style=for-the-badge&logo=itch.io" alt="Play on itch.io" />
+  </a>
+  <a href="https://godotengine.org/">
+    <img src="https://img.shields.io/badge/Made_with-Godot_4-478CBF?style=for-the-badge&logo=godot-engine" alt="Made with Godot 4" />
+  </a>
+</p>
 
-![Gameplay de Under Your Mask](uymminiatura.png)
+<p align="center">
+  <img src="UnderYourMaskGIF.gif" width="45%" alt="Gameplay de Under Your Mask" />
+  <img src="uymminiatura.png" width="45%" alt="Miniatura de Under Your Mask" />
+</p>
 
 ## 📖 Contexto del Proyecto
 
@@ -19,10 +28,6 @@ Como desarrollador, enfoqué este proyecto en construir sistemas lógicos robust
 * **Máquina de Estados de Jefe Final:** Lógica de combate estructurada en fases progresivas dependientes del HP. Implementación de ataques predecibles pero rítmicos que evitan la selección aleatoria pura para garantizar un patrón de baile ("baile mortal") justo para el jugador.
 * **Sincronización Animación-Código (Freeze-Frame):** Sistema de impacto matemático donde la velocidad de reproducción de los `AnimationPlayers` se escala de forma dinámica (`velocidad_playback = duracion_base / duracion_ataque`), combinado con micro-pausas (`await`) para generar sensación de "peso" (Game Feel) en los golpes finales.
 * **Gestión de Escenas y Transiciones:** Uso intensivo de `CanvasLayer` y `Tweens` para fundidos, cinemáticas y cortinas de transición sin bloquear el hilo principal de físicas del motor.
-
-## 🖼️ Gameplay
-
-![Miniatura del juego](UnderYourMaskGIF.gif)
 
 ## 🚀 Instalación y Ejecución Local
 
