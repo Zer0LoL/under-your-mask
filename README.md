@@ -3,7 +3,7 @@
 [![Play on itch.io](https://img.shields.io/badge/Play_on-itch.io-FA5C5C?style=for-the-badge&logo=itch.io)](https://zer0lol.itch.io/under-your-mask)
 [![Godot Engine](https://img.shields.io/badge/Made_with-Godot_4-478CBF?style=for-the-badge&logo=godot-engine)](https://godotengine.org/)
 
-![Gameplay de Under Your Mask](UnderYourMaskGIF.gif)
+![Gameplay de Under Your Mask](uymminiatura.png)
 
 ## 📖 Contexto del Proyecto
 
@@ -20,9 +20,9 @@ Como desarrollador, enfoqué este proyecto en construir sistemas lógicos robust
 * **Sincronización Animación-Código (Freeze-Frame):** Sistema de impacto matemático donde la velocidad de reproducción de los `AnimationPlayers` se escala de forma dinámica (`velocidad_playback = duracion_base / duracion_ataque`), combinado con micro-pausas (`await`) para generar sensación de "peso" (Game Feel) en los golpes finales.
 * **Gestión de Escenas y Transiciones:** Uso intensivo de `CanvasLayer` y `Tweens` para fundidos, cinemáticas y cortinas de transición sin bloquear el hilo principal de físicas del motor.
 
-## 🖼️ Capturas
+## 🖼️ Gameplay
 
-![Miniatura del juego](uymminiatura.png)
+![Miniatura del juego](UnderYourMaskGIF.gif)
 
 ## 🚀 Instalación y Ejecución Local
 
